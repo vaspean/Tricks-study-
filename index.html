@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+
+  </script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" /> -->
+  <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
+  <!-- or -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+
+  <script src="inputmask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="just-validate.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+
+        // new SimpleBar(document.getElementById('scrollId'), {
+        //     autoHide: false,
+        //     // scrollbarMaxSize: 20,
+        //     // scrollbarMinSize: 0
+        // });
+
+  </script>
+</head>
+
+<body>
+  <div class="bonus">
+    <div class="checkboxes">
+      <h2 class="checkboxes__h2">
+        Категории:
+      </h2>
+      <ul class="checkboxes__list">
+        <li class="checkboxes__item">
+          <label for="check">
+            <input class="checkboxes__input" type="checkbox" name="check" id="check">
+            <span class="checkboxes__span">
+              Динозавры
+            </span>
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label for="check1">
+            <input class="checkboxes__input" type="checkbox" name="check1" id="check1">
+            <span class="checkboxes__span">
+              Медведи
+            </span>
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label for="check2">
+            <input class="checkboxes__input" type="checkbox" name="check2" id="check2">
+            <span class="checkboxes__span">
+              Косули
+            </span>
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label for="check3">
+            <input class="checkboxes__input" type="checkbox" name="check3" id="check3">
+            <span class="checkboxes__span">
+              Лисы
+            </span>
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label for="check4">
+            <input class="checkboxes__input" type="checkbox" name="check4" id="check4">
+            <span class="checkboxes__span">
+              Волки
+            </span>
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label for="check5">
+            <input class="checkboxes__input" type="checkbox" name="check5" id="check5">
+            <span class="checkboxes__span">
+              Олени и лоси
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="selection">
+      <select name="select">
+        <option value="Материал">Материал</option>
+        <option value="Древесина">Древесина</option>
+        <option value="Металл">Металл</option>
+        <option value="Камень">Камень</option>
+        <option value="Пластик">Пластик</option>
+        <option value="Композитный">Композитный</option>
+        <option value="Гипс">Гипс</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="yandex-map">
+    <div id="map" style="width: 460px; height: 460px"></div>
+  </div>
+
+  <div class="scroll" data-simplebar id="scrollId">
+    Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно
+    развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены
+    отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный
+    эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее:
+    непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом,
+    однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+    социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты
+    для первоочередных требований.
+  </div>
+
+  <div class="validation">
+    <div class="validation__container">
+      <form action="" class="form">
+        <span class="validation__span">Как вас зовут</span>
+        <input class="validation__input" name="Имя" type="text" placeholder="Имя*" data-validate-field="name">
+        <span class="validation__span">Укажите ваш телефон</span>
+        <input class="validation__input" name="Телефон" type="tel" placeholder="Телефон*" data-validate-field="tel"
+          data-validate-rules="phone" id="tel">
+        <span class="validation__span">Укажите ваш e-mail</span>
+        <input class="validation__input" name="email" type="email" placeholder="E-mail*" data-validate-field="mail">
+        <button class="validation__button">Заказать</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="tooltip">
+    Следует отметить, что социально&#8209;экономическое развитие способствует повышению качества переосмысления
+    внешнеэкономических политик.
+    <span class="tooltip__span">
+      <svg class="tooltip__svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path class="tooltip__svg_path" fill-rule="evenodd" clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+          fill="#BCBCBC" />
+      </svg>
+      <div class="tooltip__discription">Глава 2, страница 176</div>
+    </span>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    const element = document.querySelector('select');
+    const choices = new Choices(element, {
+      searchEnabled: false,
+      itemSelectText: '',
+      shouldSort: false,
+    });
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+        center: [48.872185, 2.354215],
+        zoom: 12,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/pointMap.svg',
+          iconImageSize: [28, 40],
+        });
+
+      myMap.geoObjects
+        .add(myPlacemark)
+    });
+  </script>
+  <script>
+    var selector = document.getElementById("tel");
+    var im = new Inputmask("+7(999)-999-99-99");
+    im.mask(selector);
+
+    new JustValidate('.form', {
+      rules: {
+        name: {
+          required: true,
+          minLength: 2,
+          maxLength: 20
+        },
+        tel: {
+          required: true,
+          function: (name, value) => {
+            const phone = selector.inputmask.unmaskedvalue()
+            return Number(phone) && phone.length === 10
+          }
+        },
+        mail: {
+          required: true,
+          email: true
+        },
+      },
+      messages: {
+        name: {
+          minLength: 'Поле должно содержать минимум 2 символа',
+          maxLength: 'Поле должно содержать максимум 30 символов',
+          required: 'Поле обязательно для заполнения',
+        },
+        tel: {
+          required: 'Поле обязательно для заполнения',
+          function: 'Неправильное значение'
+        },
+        mail: {
+          email: 'Пожалуйста, введите правильное значение e-mail',
+          required: 'Поле обязательно для заполнения',
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
